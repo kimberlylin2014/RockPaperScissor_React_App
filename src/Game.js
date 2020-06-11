@@ -38,6 +38,7 @@ class Game extends Component {
     getSelectedCard(handID, cardName, cardID) {
         console.log(handID);
         console.log(cardName)
+
         if(handID === this.state.hand1.id) {
             this.setState((currentState) => {
                 return {hand1: {...currentState.hand1, ready: true, selectedCardName: cardName, selectedCardID: cardID}}

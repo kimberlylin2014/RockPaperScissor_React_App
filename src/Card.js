@@ -17,6 +17,7 @@ class Card extends Component {
         this.props.getSelectedCard(this.props.hand.id, this.props.card.name, this.props.cardID)
     }
     handleChangeToBlue() {
+        console.log(`changing color card id : ${this.props.cardID}`)
         this.props.changeToBlue(this.props.cardID)
     }
     render() {
