@@ -1,0 +1,7 @@
+.Player {
+    text-align: center;
+}
+.Player-Deck {
+    display: flex;
+    justify-content: space-around;
+}

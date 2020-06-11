@@ -1,0 +1,19 @@
+.Card {
+    border: 1px solid black;
+    width: 400px;
+    height: 200px;
+    margin: 10px;
+}
+
+.Card-Blue {
+    border: 5px solid rgb(66, 131, 150);
+    background-color: #f7f7ee;
+    width: 400px;
+    height: 200px;
+    margin: 10px;
+}
+
+.Card img, .Card-Blue img {
+    width: 200px;
+    height: 100px;
+}
