@@ -5,7 +5,13 @@ import './App.css';
 
 class App extends Component {
   render() {
-    return  <Game />
+    return (
+      <div className="App">
+           <Game />
+      </div>
+  
+    )
+  
   }
 }
 

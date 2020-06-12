@@ -12,13 +12,24 @@ class Player extends Component {
     }
     render() {
         let hand = this.props.hand;
-        let count = 0;
+        let playerColor = "Player-Default"
+        let playerStatus = ""
+        if (hand.winner) {
+            playerColor = "Player-Win"
+            playerStatus = "Wins"
+        } else if (hand.winner === false) {
+            playerColor = "Player-Lost"
+            playerStatus = "Lost"
+        } else {
+            playerStatus = ""
+        }
         return(
-            <div className="Player">
-                <h1>Player {hand.id}</h1>
+            <div className="Player mt-3">
+                <h3 className={playerColor}>Player {hand.id} {playerStatus}</h3>
                 <div className="Player-Deck">
                     {hand.deck.map(card => {
                         let cardColor;
+                        // let cardID = `${hand.id}-${count++}`;
                         if(this.state.cardID === card.id) {
                             cardColor = this.state.cardColor
                         }

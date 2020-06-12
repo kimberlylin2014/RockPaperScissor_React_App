@@ -1,7 +1,19 @@
 .Player {
     text-align: center;
 }
+.Player-Default {
+    color: white;
+}
 .Player-Deck {
     display: flex;
     justify-content: space-around;
+    align-items: center;
+}
+
+.Player-Win {
+    color: #a8df65;
+}
+
+.Player-Lost {
+    color: #d63447;
 }
