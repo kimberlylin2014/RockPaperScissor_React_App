@@ -49,7 +49,6 @@ class Game extends Component {
                 return {hand2: {...currentState.hand2, ready: true, selectedCardName: cardName, selectedCardID: cardID}}
             })
         }
-    
     }
     play() {
         let selectedHand1 = this.state.hand1.selectedCardName;
@@ -99,13 +98,14 @@ class Game extends Component {
     render() {
         let {hand1, hand2} = this.state;
         let playButton =  
-            <button className="btn btn-warning mb-4 mt-3" disabled={this.state.hand1.ready && this.state.hand2.ready ? false : true} onClick={this.play}>
+            <button className="btn btn-warning  mt-5" disabled={this.state.hand1.ready && this.state.hand2.ready ? false : true} onClick={this.play}>
                  {this.state.hand1.ready && this.state.hand2.ready ? "PLAY" : "Each Player Needs To Select A Card"}
             </button>
         let replayButton = 
-            <button className="btn btn-info mb-4 mt-3" onClick={this.resetGame}>{this.state.tieGame ? "Tie Game. ": ""} Replay</button>
+            <button className="btn btn-info mt-5" onClick={this.resetGame}>{this.state.tieGame ? "Tie Game. ": ""} Replay</button>
         return (
-            <div className="Game">     
+            <div className="Game">   
+            <h1 className="Game-Title">Rock Paper Scissor</h1>  
                 <Player 
                     hand = {hand1}
                     getSelectedCard = {this.getSelectedCard}
@@ -116,7 +116,6 @@ class Game extends Component {
                     getSelectedCard = {this.getSelectedCard}
                 />
             </div>
-
         )
     }
 }

@@ -24,7 +24,7 @@ class Player extends Component {
             playerStatus = ""
         }
         return(
-            <div className="Player mt-3">
+            <div className="Player">
                 <h3 className={playerColor}>Player {hand.id} {playerStatus}</h3>
                 <div className="Player-Deck">
                     {hand.deck.map(card => {
@@ -44,10 +44,7 @@ class Player extends Component {
                                 changeToBlue = {this.changeToBlue}
                             />  
                         )    
-
-                    }
-                       
-                    )}
+                    })}
                 </div>
             </div>
         )

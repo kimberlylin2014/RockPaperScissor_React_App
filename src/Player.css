@@ -1,5 +1,6 @@
 .Player {
     text-align: center;
+    margin-top: 40px;
 }
 .Player-Default {
     color: white;
@@ -8,6 +9,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .Player-Win {
